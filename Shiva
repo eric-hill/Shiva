@@ -1,0 +1,28 @@
+Name: Eric Hill
+Date: 9/28/2011
+
+The game uses blue to represent stairwells and red to represent levers. By using the action button you can operate the lever and unlock the stairwells.
+The game can be saved at any point, but reloads from the beginning of the level saved at. It's reloaded at that point to make sure any changes made to the xml data file would
+not impact the saved state of the program. 
+
+The application opens up displaying a Front-End GUI. The user at this point has only three options, he/she can click New, Load, or Quit in the menu. All other options are deactivated at this point.
+
+If the user clicks New, then the program will pull up a second window acting as a form to accept user supplied data for their character. The form will ask the user for their name, age and gender. If the age supplied is not numeric, then the program will delete the user's entry and output 'Please enter a valid number.' Once the user has supplied proper data for the program, the program will continue to the play state.
+
+If the user clicks Load, then the program will look and see if a save file exists. If the file exists then the program outputs 'Load Successful' and enters the play phase using the saved data, else the program will output 'Saved file not found' and reset back to its original state.
+
+If the user clicks Quit, then the program will close.
+
+Once the user has entered the play state, all the buttons and menu items will become valid and if the user reached the play state through a new game then the program will output the introduction to the game. The user will have the option of starting a new game, loading an old game, saving their current game, or quitting the game at any point.
+
+Starting a new game in the play state would react the same as if the user had started a new game during the original state. Loading an old game would simply restart the game as if it was loaded in the original state; however if a save file does not exist, then the program will output 'Saved file not found' and allow the user to continue playing the game they were in. If the user clicks quit, then the application will close.
+
+The user has in-game abilities at this point. He may click on the North, South, East, or West buttons and his character will travel in the respective direction. To symbolize the moving of the character, the character will be erased from his old square and redrawn on the new square. The game will output the text for the square the player moved to.
+
+If the character encounters a wall or impassable object, then he will not be able to travel in that direction and the game will append 'Cannot pass through Wall' or 'Cannot pass through impassable object'.
+
+The character can at any point examine his surroundings or perform an action on his surroundings. If there is nothing to act upon then the default action will be output, 'There is no action to perform here'. Else the game will output a special text, signifying that something about the level has changed as a reaction to the player's action. Examining will either output the original text received from moving on that square, or hint to the player that some sort of action can be performed here.
+
+The game will loop through the play state until the user moves onto the stairwell, at that point the level will be over and either the game will be over, if the player completed the last level, or the next level will load.
+
+Once the game is over, the user will be allowed to either play the game again or quit the program. If the user decides to play the game again the new game state will begin, otherwise the application will close.
